@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+:root {
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(var(--Soft-blue), var(--Soft-violet));
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  border-radius: 30px;
+  height: 70vh;
+  width: 920px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-gap: 6rem;
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 1260% 65%;
+}
+
+.card-question .answer {
+  display: none;
+}
+
+.active .answer {
+  display: block;
+  padding-bottom: 1.3rem;
+  color: var(--Dark-grayish-blue);
+}
+
+.active img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in;
+}
+
+.acordion {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+}
+
+.acordion-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-question {
+  width: 350px;
+  border-bottom: 1px solid var(--Light-grayish-blue);
+}
+
+.title-faq {
+  font-size: 3rem;
+  margin-top: 0px;
+}
+
+.question-title {
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--Very-dark-desaturated-blue);
+  margin: 1.4rem 0rem;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.answer {
+  width: 100%;
+}
+
+.active h3 {
+  font-weight: 700;
+}
+
+.question img {
+  align-self: center;
+}
+
+.image-con {
+  position: relative;
+}
+
+.image-noc {
+  background: url(./images/illustration-woman-online-desktop.svg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: 120% center;
+}
+
+.box {
+  position: absolute;
+  top: 42%;
+  left: -25%;
+}
+
+@media screen and (max-width: 475px) {
+  .container {
+    width: 390px;
+    margin-top: 80px;
+    min-height: 80vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+    grid-gap: 0.5rem;
+    position: relative;
+
+  }
+  .image-con {
+    background: url("./images/bg-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center 590%;
+    width: 100%;
+  }
+  .image-noc {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-size: 72%;
+    background-position: center;
+    top: -129%;
+  }
+  .box {
+    width: 55px;
+    left: 19%;
+    top: -30%;
+  }
+  .acordion {
+    margin-top: 0px;
+    width: 100px;
+  }
+  .acordion-card {
+    margin-left: 20px;
+  }
+  .title-faq {
+    margin-top: 20px;
+    margin-left: 165px;
+    font-size: 2rem;
+  }
+
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
